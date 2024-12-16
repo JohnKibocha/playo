@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set Goals - Playo</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+<!-- Header -->
+<header class="bg-green-600 text-white py-4 px-6">
+  <div class="flex justify-between items-center">
+    <button onclick="window.history.back()" class="bg-red-500 w-10 h-10 flex items-center justify-center rounded-full">
+      <span class="text-xl">&#x276E;</span>
+    </button>
+    <h1 class="text-xl font-bold">Set Goals</h1>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto px-4 py-8">
+  <!-- Weekly Fit Goals Section -->
+  <section class="bg-orange-100 rounded-md shadow-md p-6 mb-6">
+    <h2 class="font-bold mb-4 text-center">Set your goals for this week</h2>
+    <div class="grid grid-cols-2 gap-4">
+      <button class="bg-gray-800 text-white py-4 px-6 rounded-md text-center">120 mins/week</button>
+      <button class="bg-gray-800 text-white py-4 px-6 rounded-md text-center">180 mins/week</button>
+      <button class="bg-gray-800 text-white py-4 px-6 rounded-md text-center">240 mins/week</button>
+      <button class="bg-gray-800 text-white py-4 px-6 rounded-md text-center">300 mins/week</button>
+    </div>
+    <button class="mt-6 w-full bg-green-500 text-white py-2 px-4 rounded-md text-center hover:bg-green-600" onclick="window.location.href='set_goals_form.html'">Set Goal</button>
+  </section>
+
+  <!-- Daily Goals Section -->
+  <section class="bg-orange-100 rounded-md shadow-md p-6">
+    <h2 class="font-bold mb-4 text-center">Set your daily goals</h2>
+    <div class="space-y-4">
+      <div class="bg-white px-4 py-2 rounded-md shadow-md">Goal 1: Cardio for 30 minutes</div>
+      <div class="bg-white px-4 py-2 rounded-md shadow-md">Goal 2: Yoga for 20 minutes</div>
+      <div class="bg-white px-4 py-2 rounded-md shadow-md">Goal 3: Weight Training for 40 minutes</div>
+      <div class="bg-white px-4 py-2 rounded-md shadow-md">Goal 4: Jogging for 15 minutes</div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer Navigation -->
+<footer class="bg-white shadow-inner py-4 fixed bottom-0 w-full">
+  <div class="flex justify-around">
+    <a href="home.html" class="text-center text-green-600">
+      <span class="material-icons">home</span>
+      <p class="text-sm">Home</p>
+    </a>
+    <a href="play.html" class="text-center text-gray-500">
+      <span class="material-icons">sports_esports</span>
+      <p class="text-sm">Play</p>
+    </a>
+    <a href="learn.html" class="text-center text-gray-500">
+      <span class="material-icons">menu_book</span>
+      <p class="text-sm">Learn</p>
+    </a>
+    <a href="book_home.html" class="text-center text-gray-500">
+      <span class="material-icons">book_online</span>
+      <p class="text-sm">Book</p>
+    </a>
+    <a href="logout.html" class="text-center text-gray-500">
+      <span class="material-icons">logout</span>
+      <p class="text-sm">Logout</p>
+    </a>
+  </div>
+</footer>
+</body>
+</html>

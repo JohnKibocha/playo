@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Playo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+<div class="container mx-auto px-4 py-12">
+    <!-- Back Button -->
+    <div class="mb-4">
+        <button onclick="window.history.back()" class="bg-red-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
+            <span class="text-xl">&#x276E;</span>
+        </button>
+    </div>
+
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-8">
+        <h1 class="text-2xl font-bold text-center text-green-600 mb-6">Login to Playo</h1>
+        <form id="loginForm" action="home.html" method="POST">
+        <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-gray-700 font-medium mb-2">Password</label>
+                <input type="password" id="password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+            <div class="mb-6 text-right">
+                <a href="#" class="text-sm text-blue-500 hover:underline">Forgot password?</a>
+            </div>
+            <button type="submit" class="w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">Login</button>
+        </form>
+        <p class="text-center text-gray-700 mt-4">
+            Don’t have an account? <a href="signup.html" class="text-blue-500 hover:underline">Sign Up</a>
+        </p>
+    </div>
+</div>
+<script src="../scripts/script.js"></script>
+</body>
+</html>

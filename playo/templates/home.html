@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Playo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+<!-- Header -->
+<header class="bg-green-600 text-white py-4 px-6">
+    <div class="flex justify-between items-center">
+        <h1 class="text-xl font-bold">PLAYO</h1>
+        <div class="flex space-x-4">
+            <a href="conversations_page.html" class="p-2 rounded-full">
+                <span class="material-icons">chat</span>
+            </a>
+            <a href="notifications.html" class="p-2 rounded-full">
+                <span class="material-icons">notifications</span>
+            </a>
+            <a href="profile.html" class="p-2 rounded-full">
+                <span class="material-icons">account_circle</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto px-4 py-8">
+    <!-- Weekly Fit Goal -->
+    <section class="mb-6">
+        <div class="bg-blue-100 p-4 rounded-md flex justify-between items-center">
+            <p class="text-lg font-bold">Set Your Weekly Fit Goal</p>
+            <a href="set_goals_form.html" class="bg-green-500 text-white py-2 px-4 rounded-md">
+                <span class="material-icons">fitness_center</span> Set Goal
+            </a>
+        </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section class="mb-6">
+        <!-- Create Game -->
+        <div class="bg-white rounded-md shadow-md p-4 grid grid-cols-2 items-center gap-4">
+            <h2 class="text-lg font-bold">Create Game</h2>
+            <a href="create_game.html" class="bg-black text-white py-2 px-4 rounded-md text-center">
+                <span class="material-icons">sports</span> Create
+            </a>
+            <a href="#" class="col-span-2 text-center text-blue-500 mt-2">View My Calendar</a>
+        </div>
+    </section>
+
+    <!-- Play and Book Options -->
+    <section class="grid grid-cols-2 gap-4 mb-6">
+        <a href="play.html" class="bg-white rounded-md shadow-md p-4">
+            <h2 class="text-lg font-bold mb-2">Play</h2>
+            <img src="../images/play.png" alt="Play" class="w-full rounded-md">
+        </a>
+        <a href="book_home.html" class="bg-white rounded-md shadow-md p-4">
+            <h2 class="text-lg font-bold mb-2">Book</h2>
+            <img src="../images/booking.png" alt="Book" class="w-full rounded-md">
+        </a>
+    </section>
+
+    <!-- Spotlight -->
+    <section class="bg-white rounded-md shadow-md p-4">
+        <h2 class="text-lg font-bold mb-2">Spotlight</h2>
+        <div class="grid grid-cols-3 gap-2">
+            <a href="#" class="block bg-blue-200 rounded-md py-2 text-center">
+                <span class="material-icons">school</span> Coach
+            </a>
+            <a href="#" class="block bg-green-200 rounded-md py-2 text-center">
+                <span class="material-icons">music_note</span> Playlist
+            </a>
+            <a href="#" class="block bg-red-200 rounded-md py-2 text-center">
+                <span class="material-icons">group</span> Join Game
+            </a>
+        </div>
+    </section>
+</main>
+
+<!-- Footer Navigation -->
+<footer class="bg-white shadow-inner py-4 fixed bottom-0 w-full">
+    <div class="flex justify-around">
+        <a href="home.html" class="text-center text-green-600">
+            <span class="material-icons">home</span>
+            <p class="text-sm">Home</p>
+        </a>
+        <a href="play.html" class="text-center text-gray-500">
+            <span class="material-icons">sports_esports</span>
+            <p class="text-sm">Play</p>
+        </a>
+        <a href="learn.html" class="text-center text-gray-500">
+            <span class="material-icons">menu_book</span>
+            <p class="text-sm">Learn</p>
+        </a>
+        <a href="book_home.html" class="text-center text-gray-500">
+            <span class="material-icons">book_online</span>
+            <p class="text-sm">Book</p>
+        </a>
+        <a href="logout.html" class="text-center text-gray-500">
+            <span class="material-icons">logout</span>
+            <p class="text-sm">Logout</p>
+        </a>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation Page - Playo</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+<!-- Header -->
+<header class="bg-green-600 text-white py-4 px-6">
+  <div class="flex justify-between items-center">
+    <button onclick="window.history.back()" class="bg-red-500 w-10 h-10 flex items-center justify-center rounded-full">
+      <span class="text-xl">&#x276E;</span>
+    </button>
+    <h1 class="text-xl font-bold">PLAYO</h1>
+    <div class="flex space-x-4">
+      <button class="p-2 rounded-full">
+        <span class="material-icons">chat</span>
+      </button>
+      <button class="p-2 rounded-full">
+        <span class="material-icons">notifications</span>
+      </button>
+      <button class="p-2 rounded-full">
+        <span class="material-icons">account_circle</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto px-4 py-8">
+  <section class="bg-white rounded-md shadow-md p-6 text-center">
+    <h2 class="text-2xl font-bold text-green-600 mb-6">Thank You!</h2>
+    <p class="text-gray-700 mb-4">Your booking has been confirmed. A confirmation message has been sent to your email.</p>
+
+    <div class="mb-6">
+      <span class="material-icons text-blue-500" style="font-size: 80px;">thumb_up</span>
+    </div>
+
+    <button onclick="window.location.href='home.html'" class="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">
+      Get Back to Dashboard
+    </button>
+  </section>
+</main>
+
+<!-- Footer Navigation -->
+<footer class="bg-white shadow-inner py-4 fixed bottom-0 w-full">
+  <div class="flex justify-around">
+    <a href="home.html" id="footerHome" class="text-center text-gray-500">
+      <span class="material-icons">home</span>
+      <p class="text-sm">Home</p>
+    </a>
+    <a href="play.html" id="footerPlay" class="text-center text-gray-500">
+      <span class="material-icons">sports_esports</span>
+      <p class="text-sm">Play</p>
+    </a>
+    <a href="learn.html" id="footerLearn" class="text-center text-gray-500">
+      <span class="material-icons">menu_book</span>
+      <p class="text-sm">Learn</p>
+    </a>
+    <a href="book_home.html" id="footerBook" class="text-center text-green-500">
+      <span class="material-icons">book_online</span>
+      <p class="text-sm">Book</p>
+    </a>
+    <a href="logout.html" id="footerLogout" class="text-center text-gray-500">
+      <span class="material-icons">logout</span>
+      <p class="text-sm">Logout</p>
+    </a>
+  </div>
+</footer>
+</body>
+</html>

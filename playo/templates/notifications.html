@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - Playo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+<!-- Header -->
+<header class="bg-green-600 text-white py-4 px-6">
+    <div class="flex justify-between items-center">
+        <button onclick="window.history.back()"
+                class="bg-red-500 w-10 h-10 flex items-center justify-center rounded-full">
+            <span class="text-xl">&#x276E;</span>
+        </button>
+        <h1 class="text-xl font-bold">Notifications</h1>
+        <div></div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto px-4 py-8">
+    <section class="bg-white rounded-md shadow-md p-6">
+        <h2 class="text-lg font-bold mb-4">Recent Notifications</h2>
+
+        <!-- Notification Cards -->
+        <div class="space-y-4">
+            <div class="bg-gray-100 p-4 rounded-md shadow flex justify-between items-center">
+                <p>Game invitation from John Doe</p>
+                <button class="bg-green-500 text-white py-1 px-3 rounded hover:bg-green-600">View</button>
+            </div>
+
+            <div class="bg-gray-100 p-4 rounded-md shadow flex justify-between items-center">
+                <p>Your booking at Badminton Club is confirmed</p>
+                <button class="bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-600">Details</button>
+            </div>
+
+            <div class="bg-gray-100 p-4 rounded-md shadow flex justify-between items-center">
+                <p>Reminder: Your game starts at 6 PM</p>
+                <button class="bg-yellow-500 text-white py-1 px-3 rounded hover:bg-yellow-600">Dismiss</button>
+            </div>
+
+            <div class="bg-gray-100 p-4 rounded-md shadow flex justify-between items-center">
+                <p>Weekly fitness goal achieved! Great job!</p>
+                <button class="bg-gray-500 text-white py-1 px-3 rounded hover:bg-gray-600">Close</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer Navigation -->
+<footer class="bg-white shadow-inner py-4 fixed bottom-0 w-full">
+    <div class="flex justify-around">
+        <a href="home.html" class="text-center text-green-500">
+            <span class="material-icons">home</span>
+            <p class="text-sm">Home</p>
+        </a>
+        <a href="play.html" class="text-center text-gray-500">
+            <span class="material-icons">sports_esports</span>
+            <p class="text-sm">Play</p>
+        </a>
+        <a href="learn.html" class="text-center text-gray-500">
+            <span class="material-icons">menu_book</span>
+            <p class="text-sm">Learn</p>
+        </a>
+        <a href="book_home.html" class="text-center text-gray-500">
+            <span class="material-icons">book_online</span>
+            <p class="text-sm">Book</p>
+        </a>
+        <a href="logout.html" class="text-center text-gray-500">
+            <span class="material-icons">logout</span>
+            <p class="text-sm">Logout</p>
+        </a>
+    </div>
+</footer>
+</body>
+</html>

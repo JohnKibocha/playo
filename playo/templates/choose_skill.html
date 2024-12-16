@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Skill - Playo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+<!-- Header -->
+<header class="bg-green-600 text-white py-4 px-6">
+    <div class="flex justify-between items-center">
+        <button onclick="window.history.back()" class="bg-red-500 w-10 h-10 flex items-center justify-center rounded-full">
+            <span class="text-xl">&#x276E;</span>
+        </button>
+        <h1 class="text-xl font-bold">Choose Skill Level</h1>
+        <div></div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto px-4 py-8">
+    <section class="bg-white rounded-md shadow-md p-6">
+        <h2 class="text-lg font-bold mb-4">Set your skill level</h2>
+        <p class="text-gray-700 mb-6">How would you rate yourself at your chosen sport?</p>
+
+        <div class="grid gap-4">
+            <button class="bg-pink-100 border border-gray-300 py-3 px-4 rounded-md shadow-md flex items-center justify-between hover:bg-pink-200" id="beginner">
+                <span>Beginner</span>
+                <span class="material-icons text-gray-500">radio_button_unchecked</span>
+            </button>
+
+            <button class="bg-pink-100 border border-gray-300 py-3 px-4 rounded-md shadow-md flex items-center justify-between hover:bg-pink-200" id="amateur">
+                <span>Amateur</span>
+                <span class="material-icons text-gray-500">radio_button_unchecked</span>
+            </button>
+
+            <button class="bg-pink-100 border border-gray-300 py-3 px-4 rounded-md shadow-md flex items-center justify-between hover:bg-pink-200" id="intermediate">
+                <span>Intermediate</span>
+                <span class="material-icons text-gray-500">radio_button_unchecked</span>
+            </button>
+
+            <button class="bg-pink-100 border border-gray-300 py-3 px-4 rounded-md shadow-md flex items-center justify-between hover:bg-pink-200" id="advanced">
+                <span>Advanced</span>
+                <span class="material-icons text-gray-500">radio_button_unchecked</span>
+            </button>
+
+            <button class="bg-pink-100 border border-gray-300 py-3 px-4 rounded-md shadow-md flex items-center justify-between hover:bg-pink-200" id="professional">
+                <span>Professional</span>
+                <span class="material-icons text-gray-500">radio_button_unchecked</span>
+            </button>
+        </div>
+
+        <div class="mt-8">
+            <button class="w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600" id="doneButton">DONE</button>
+        </div>
+    </section>
+</main>
+
+<!-- Footer Navigation -->
+<footer class="bg-white shadow-inner py-4 fixed bottom-0 w-full">
+    <div class="flex justify-around">
+        <a href="home.html" class="text-center text-gray-500">
+            <span class="material-icons">home</span>
+            <p class="text-sm">Home</p>
+        </a>
+        <a href="play.html" class="text-center text-green-500">
+            <span class="material-icons">sports_esports</span>
+            <p class="text-sm">Play</p>
+        </a>
+        <a href="learn.html" class="text-center text-gray-500">
+            <span class="material-icons">menu_book</span>
+            <p class="text-sm">Learn</p>
+        </a>
+        <a href="book_home.html" class="text-center text-gray-500">
+            <span class="material-icons">book_online</span>
+            <p class="text-sm">Book</p>
+        </a>
+        <a href="logout.html" class="text-center text-gray-500">
+            <span class="material-icons">logout</span>
+            <p class="text-sm">Logout</p>
+        </a>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('button').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const skillLevel = e.currentTarget.id;
+            if (skillLevel && skillLevel !== 'doneButton') {
+                alert(`You selected ${skillLevel} skill level.`);
+            } else if (skillLevel === 'doneButton') {
+                alert('Your skill level has been set. Redirecting to the next step.');
+                window.location.href = 'choose_time.html';
+            }
+        });
+    });
+</script>
+</body>
+</html>

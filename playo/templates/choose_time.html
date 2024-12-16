@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Time - Playo</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+<!-- Header -->
+<header class="bg-green-600 text-white py-4 px-6">
+  <div class="flex justify-between items-center">
+    <button onclick="window.history.back()" class="bg-red-500 w-10 h-10 flex items-center justify-center rounded-full">
+      <span class="text-xl">&#x276E;</span>
+    </button>
+    <h1 class="text-xl font-bold">Choose Time</h1>
+    <div></div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto px-4 py-8">
+  <section class="bg-white rounded-md shadow-md p-6">
+    <h2 class="text-lg font-bold mb-4">Select a Time Slot</h2>
+    <p class="text-gray-700 mb-6">Choose a convenient time for your match or activity.</p>
+
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <button class="bg-yellow-100 border border-gray-300 py-6 px-4 rounded-md shadow-md flex flex-col items-center justify-center hover:bg-yellow-200" id="morning">
+        <span class="material-icons text-yellow-500">wb_sunny</span>
+        <p class="mt-2 text-sm">Morning (12 AM - 9 AM)</p>
+      </button>
+
+      <button class="bg-blue-100 border border-gray-300 py-6 px-4 rounded-md shadow-md flex flex-col items-center justify-center hover:bg-blue-200" id="day">
+        <span class="material-icons text-blue-500">brightness_5</span>
+        <p class="mt-2 text-sm">Day (9 AM - 4 PM)</p>
+      </button>
+
+      <button class="bg-orange-100 border border-gray-300 py-6 px-4 rounded-md shadow-md flex flex-col items-center justify-center hover:bg-orange-200" id="evening">
+        <span class="material-icons text-orange-500">brightness_4</span>
+        <p class="mt-2 text-sm">Evening (4 PM - 9 PM)</p>
+      </button>
+
+      <button class="bg-indigo-100 border border-gray-300 py-6 px-4 rounded-md shadow-md flex flex-col items-center justify-center hover:bg-indigo-200" id="night">
+        <span class="material-icons text-indigo-500">nights_stay</span>
+        <p class="mt-2 text-sm">Night (9 PM - 12 AM)</p>
+      </button>
+    </div>
+
+    <div class="mt-6">
+      <label for="exactTime" class="block text-gray-700 font-medium mb-2">Or, select a specific time:</label>
+      <input type="time" id="exactTime" name="exactTime" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+    </div>
+
+    <div class="mt-8">
+      <button class="w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600" id="doneButton">DONE</button>
+    </div>
+  </section>
+</main>
+
+<!-- Footer Navigation -->
+<footer class="bg-white shadow-inner py-4 fixed bottom-0 w-full">
+  <div class="flex justify-around">
+    <a href="home.html" class="text-center text-gray-500">
+      <span class="material-icons">home</span>
+      <p class="text-sm">Home</p>
+    </a>
+    <a href="play.html" class="text-center text-green-500">
+      <span class="material-icons">sports_esports</span>
+      <p class="text-sm">Play</p>
+    </a>
+    <a href="learn.html" class="text-center text-gray-500">
+      <span class="material-icons">menu_book</span>
+      <p class="text-sm">Learn</p>
+    </a>
+    <a href="book_home.html" class="text-center text-gray-500">
+      <span class="material-icons">book_online</span>
+      <p class="text-sm">Book</p>
+    </a>
+    <a href="logout.html" class="text-center text-gray-500">
+      <span class="material-icons">logout</span>
+      <p class="text-sm">Logout</p>
+    </a>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const timeSlot = e.currentTarget.id;
+      if (timeSlot && timeSlot !== 'doneButton') {
+        alert(`You selected the ${timeSlot} slot.`);
+      } else if (timeSlot === 'doneButton') {
+        alert('Time slot has been set. Redirecting to the next step.');
+        window.location.href = 'create_game.html';
+      }
+    });
+  });
+
+  const exactTimeInput = document.getElementById('exactTime');
+  exactTimeInput.addEventListener('change', (e) => {
+    const specificTime = e.target.value;
+    alert(`You selected an exact time: ${specificTime}`);
+  });
+</script>
+</body>
+</html>

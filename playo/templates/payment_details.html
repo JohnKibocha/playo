@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form - Playo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+<!-- Header -->
+<header class="bg-green-600 text-white py-4 px-6">
+    <div class="flex justify-between items-center">
+        <button onclick="window.history.back()" class="bg-red-500 w-10 h-10 flex items-center justify-center rounded-full">
+            <span class="text-xl">&#x276E;</span>
+        </button>
+        <h1 class="text-xl font-bold">PLAYO</h1>
+        <div class="flex space-x-4">
+            <button class="p-2 rounded-full">
+                <span class="material-icons">chat</span>
+            </button>
+            <button class="p-2 rounded-full">
+                <span class="material-icons">notifications</span>
+            </button>
+            <button class="p-2 rounded-full">
+                <span class="material-icons">account_circle</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto px-4 py-8">
+    <section class="bg-white rounded-md shadow-md p-6">
+        <h2 class="text-lg font-bold mb-4">Payment Details</h2>
+
+        <form id="paymentForm">
+            <div class="mb-4">
+                <label for="cardNumber" class="block text-gray-700 font-medium mb-2">Card Number</label>
+                <input type="text" id="cardNumber" name="cardNumber" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="---- ---- ---- ----">
+            </div>
+
+            <div class="mb-4 grid grid-cols-2 gap-4">
+                <div>
+                    <label for="expDate" class="block text-gray-700 font-medium mb-2">Exp. Date</label>
+                    <input type="text" id="expDate" name="expDate" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="MM/YY">
+                </div>
+                <div>
+                    <label for="cvv" class="block text-gray-700 font-medium mb-2">CVV</label>
+                    <input type="text" id="cvv" name="cvv" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="---">
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="country" class="block text-gray-700 font-medium mb-2">Country</label>
+                <input type="text" id="country" name="country" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="zipCode" class="block text-gray-700 font-medium mb-2">ZIP Code</label>
+                <input type="text" id="zipCode" name="zipCode" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+
+            <div class="flex justify-between mt-6">
+                <button type="submit" class="bg-green-500 text-white py-2 px-4 rounded-md w-full">Confirm Payment</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+<!-- Footer Navigation -->
+<footer class="bg-white shadow-inner py-4 fixed bottom-0 w-full">
+    <div class="flex justify-around">
+        <a href="home.html" id="footerHome" class="text-center text-gray-500">
+            <span class="material-icons">home</span>
+            <p class="text-sm">Home</p>
+        </a>
+        <a href="play.html" id="footerPlay" class="text-center text-gray-500">
+            <span class="material-icons">sports_esports</span>
+            <p class="text-sm">Play</p>
+        </a>
+        <a href="learn.html" id="footerLearn" class="text-center text-gray-500">
+            <span class="material-icons">menu_book</span>
+            <p class="text-sm">Learn</p>
+        </a>
+        <a href="book_home.html" id="footerBook" class="text-center text-green-500">
+            <span class="material-icons">book_online</span>
+            <p class="text-sm">Book</p>
+        </a>
+        <a href="logout.html" id="footerLogout" class="text-center text-gray-500">
+            <span class="material-icons">logout</span>
+            <p class="text-sm">Logout</p>
+        </a>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('paymentForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        window.location.href = 'confirmation_page.html';
+    });
+</script>
+</body>
+</html>

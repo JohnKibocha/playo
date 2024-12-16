@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversations - Playo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+<!-- Header -->
+<header class="bg-green-600 text-white py-4 px-6">
+    <div class="flex justify-between items-center">
+        <button onclick="window.history.back()"
+                class="bg-red-500 w-10 h-10 flex items-center justify-center rounded-full">
+            <span class="text-xl">&#x276E;</span>
+        </button>
+        <h1 class="text-xl font-bold">Conversations</h1>
+        <div></div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto px-4 py-8">
+    <!-- Tabs -->
+    <div class="flex justify-around border-b pb-4 mb-4">
+        <button id="gamesTab" class="text-gray-700 font-bold">Games (0)</button>
+        <button id="groupsTab" class="text-gray-700">Groups (0)</button>
+        <button id="dmsTab" class="text-gray-700">PlayPal DMs (0)</button>
+    </div>
+
+    <!-- Content -->
+    <div id="gamesContent" class="hidden">
+        <p>No Games</p>
+    </div>
+
+    <div id="groupsContent" class="hidden">
+        <p>No Groups</p>
+    </div>
+
+    <div id="dmsContent" class="hidden">
+        <p>No PlayPal DMs</p>
+    </div>
+</main>
+<!-- Footer Navigation -->
+<footer class="bg-white shadow-inner py-4 fixed bottom-0 w-full">
+    <div class="flex justify-around">
+        <a href="home.html" class="text-center text-green-500">
+            <span class="material-icons">home</span>
+            <p class="text-sm">Home</p>
+        </a>
+        <a href="play.html" class="text-center text-gray-500">
+            <span class="material-icons">sports_esports</span>
+            <p class="text-sm">Play</p>
+        </a>
+        <a href="learn.html" class="text-center text-gray-500">
+            <span class="material-icons">menu_book</span>
+            <p class="text-sm">Learn</p>
+        </a>
+        <a href="book_home.html" class="text-center text-gray-500">
+            <span class="material-icons">book_online</span>
+            <p class="text-sm">Book</p>
+        </a>
+        <a href="logout.html" class="text-center text-gray-500">
+            <span class="material-icons">logout</span>
+            <p class="text-sm">Logout</p>
+        </a>
+    </div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const gamesTab = document.getElementById('gamesTab');
+        const groupsTab = document.getElementById('groupsTab');
+        const dmsTab = document.getElementById('dmsTab');
+
+        const gamesContent = document.getElementById('gamesContent');
+        const groupsContent = document.getElementById('groupsContent');
+        const dmsContent = document.getElementById('dmsContent');
+
+        gamesTab.addEventListener('click', () => {
+            gamesContent.classList.remove('hidden');
+            groupsContent.classList.add('hidden');
+            dmsContent.classList.add('hidden');
+        });
+
+        groupsTab.addEventListener('click', () => {
+            groupsContent.classList.remove('hidden');
+            gamesContent.classList.add('hidden');
+            dmsContent.classList.add('hidden');
+        });
+
+        dmsTab.addEventListener('click', () => {
+            dmsContent.classList.remove('hidden');
+            gamesContent.classList.add('hidden');
+            groupsContent.classList.add('hidden');
+        });
+    });
+</script>
+</body>
+</html>
